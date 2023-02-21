@@ -9,4 +9,6 @@ Command + J (Esconde la terminal)
 Command + P (Busca archivos)
 Command + F (Busca caracteres en el archivo)
 
+Command + D (Luego de seleccionar una palabra aparece otro cursor al final de los siguientes caracteres similares. Apretar 'D' tantas veces sea necesario)
+
 Command + Shift + 7 (Comenta lo que seleccione)
