@@ -2,20 +2,26 @@
 let firstCard = 0
 let secondCard = 0
 let cards = []
-console.log(cards)
 let sum = 0
-let hasBlackJack = false
-let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.querySelector("#sum-el") // # para especificar que es un id
 let cardsEl = document.querySelector(".cards-el") // . para especificar que es una clase
 let deck = ""
+let player = {
+    name: "Gonza",
+    chips: 223,
+    blackjack: false,
+    alive: false
+}
+
+let playerEl = document.querySelector("#player-el")
+playerEl.textContent = player.name + ": $"+ player.chips
 
 function startGame(){
     firstCard = getRandomCard()
     secondCard = getRandomCard()
-    isAlive = true
+    player.alive = true
     sum = firstCard + secondCard
     cards = [firstCard, secondCard]
     renderGame()
@@ -26,13 +32,12 @@ function renderGame(){
         message = "Do you want to draw a new card?"
         displayGameInfo()
     }else if (sum === 21){
-       
         message = "Wohoo! You've got Blackjack!"
-        hasBlackJack = true
+        player.blackjack = true
         displayGameInfo()
     }else {
         message = "You're out of the game"
-        isAlive = false
+        player.alive = false
         displayGameInfo()
     }
 }
@@ -47,10 +52,12 @@ function displayGameInfo(){
 }
 
 function newCard(){
-    let card = getRandomCard()
-    sum += card
-    cards.push(card)
-    renderGame()
+    if (player.alive===true && player.blackjack===false){
+        let card = getRandomCard()
+        sum += card
+        cards.push(card)
+        renderGame()
+    }
 }
 
 function getRandomCard(){
