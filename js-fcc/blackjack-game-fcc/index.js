@@ -71,8 +71,33 @@ function getRandomCard(){
     }
 }
 
+// Some exercises w/arrays
 
 // let array = [1,1,2,1]
 // array.splice(2,1,1)
-// console.log(array)
+// 1,1,1,1
 
+// let largeCountries = ["Tuvalu", 
+//             "India",
+//             "USA",
+//             "Indonesia",
+//             "Monaco"]
+// largeCountries.shift()
+// largeCountries.unshift("China")
+// largeCountries.pop()
+// largeCountries.push("Pakistan")
+// "China", "India", "USA", "Indonesia", "Pakistan"
+
+// let hands = ["rock", 
+//              "paper", 
+//              "scissor"]
+
+
+// function rockPaperOrScissor(){
+//     return hands[
+//         Math.floor(Math.random()*3)
+//     ]
+// }
+
+// console.log(rockPaperOrScissor())
+// console.log(rockPaperOrScissor())
