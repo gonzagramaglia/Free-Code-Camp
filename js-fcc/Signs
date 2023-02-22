@@ -1,5 +1,7 @@
 
 
+`   Usado en template strings
+
 [ ]
 
 ~
@@ -9,7 +11,7 @@
 <>
 
 /
-\
+\    Usado para saltearse la regla de que por ejemplo // comentan el código que le sigue
 |
 
 ^
